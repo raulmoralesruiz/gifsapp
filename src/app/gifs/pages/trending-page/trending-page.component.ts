@@ -22,10 +22,9 @@ export default class TrendingPageComponent {
 
     const precarga = 300;
     const isAtBottom = scrollTop + clientHeight + precarga >= scrollHeight;
-    console.log({scrollTotal: scrollTop + clientHeight, scrollHeight, isAtBottom});
 
     if (isAtBottom) {
-      // TODO -> cargar siguiente página de gifs
+      this.gifService.loadTrendingGifs();
     }
   }
 }
